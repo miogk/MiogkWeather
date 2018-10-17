@@ -1,6 +1,7 @@
 package com.example.miogk.miogkweather;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,7 +18,7 @@ import android.widget.Toast;
 import com.example.miogk.miogkweather.db.City;
 import com.example.miogk.miogkweather.db.County;
 import com.example.miogk.miogkweather.db.Province;
-import com.example.miogk.miogkweather.util.HttpUtils;
+import com.example.miogk.miogkweather.util.HttpUtil;
 import com.example.miogk.miogkweather.util.Utility;
 
 import org.litepal.LitePal;
@@ -81,6 +82,12 @@ public class ChooseAreaFragment extends Fragment {
                 } else if (currentLevel == LEVEL_CITY) {
                     selectedCity = cityList.get(position);
                     queryCouties();
+                } else if (currentLevel == LEVEL_COUNTY) {
+                    String weatherId = countyList.get(position).getWeatherId();
+                    Intent intent = new Intent(getActivity(), WeatherActivity.class);
+                    intent.putExtra("weather_id", weatherId);
+                    startActivity(intent);
+                    getActivity().finish();
                 }
             }
         });
@@ -156,7 +163,7 @@ public class ChooseAreaFragment extends Fragment {
 
     private void queryFromServer(String address, final String type) {
         showProgressDialog();
-        HttpUtils.sendOkHttpRequest(address, new Callback() {
+        HttpUtil.sendOkHttpRequest(address, new Callback() {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 String responseText = response.body().string();

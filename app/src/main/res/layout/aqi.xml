@@ -10,7 +10,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:hint="空气质量"
+        android:text="空气质量"
+        android:textColor="#fff"
         android:textSize="20sp" />
 
     <LinearLayout
@@ -34,13 +35,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:hint="63"
+                    android:textColor="#fff"
                     android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="AQI指数" />
+                    android:text="AQI指数"
+                    android:textColor="#fff" />
             </LinearLayout>
         </RelativeLayout>
 
@@ -60,13 +62,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:hint="28"
+                    android:textColor="#fff"
                     android:textSize="40sp" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:hint="PM2.5指数" />
+                    android:text="PM2.5指数"
+                    android:textColor="#fff" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
