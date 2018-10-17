@@ -6,7 +6,7 @@ import org.litepal.crud.LitePalSupport;
  * Created by Administrator on 2018/10/14.
  */
 
-public class Provice extends LitePalSupport {
+public class Province extends LitePalSupport {
     private int id;//字段
     private String proviceName;//省的名字
     private int proviceCode;//省的代号

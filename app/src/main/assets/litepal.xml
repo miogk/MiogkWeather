@@ -1,9 +1,9 @@
 <Litepal>
     <dbname value="MiogkWeather" />
-    <version value="1" />
+    <version value="3" />
     <List>
         <mapping class="com.example.miogk.miogkweather.db.City" />
         <mapping class="com.example.miogk.miogkweather.db.County" />
-        <mapping class="com.example.miogk.miogkweather.db.Provice" />
+        <mapping class="com.example.miogk.miogkweather.db.Province" />
     </List>
 </Litepal>
